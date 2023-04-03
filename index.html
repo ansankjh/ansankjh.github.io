@@ -217,9 +217,10 @@
 									            			<td>SpringFramework를 사용하여 예약업체, 쇼핑몰, 광고업체 및 업체를 관리하는 통합플랫폼 3개의 조로 나누어 시작했습니다.<br>
 									            				처음엔 팀간의 협업을 통해 요구사항 정의서를 써보았지만 다른 조들의과 의견차이로 결과가 나오지 않았습니다.<br>
 									            				그러다 나오게 된게 UI/UX로 글이 아닌 사진으로 좀더 직관적이게 보고 추가할것과 뺄것을 정해서 웹 개발을 시작하였습니다.<br>
-																주로 담당하게된 부분은 로그인/로그아웃, 직원조회, 직원등록, 문의조회, FAQ이며 맡은 부분은 완료를 했습니다.<br>
-																로그인 화면에선 JavaScript로 자물쇠 이모티콘을 누르면 password가 아닌 text로 노출되게 구현했습니다.<br>
+																담당하게된 부분은 로그인/로그아웃, 직원조회, 직원등록, 문의조회, FAQ이며 맡은 부분은 완료를 했습니다.<br>
+																session을 이용해 로그인을 구현했고 JavaScript로 자물쇠 이모티콘을 누르면 password가 아닌 text로 노출되게 구현했습니다.<br>
 																그리고 로그인 실패시에는 메시지가 출력되는데 이 또한 JavaScript로 새로고침하면 메시지값이 초기화 되게 구현했습니다.<br>
+																로그아웃은 session.invalidate()를 사용하여 구현했습니다.<br>
 																직원조회는 총관리자만 직원관리와 직원등록이 가능합니다.<br>
 																직원등록시엔 ajax와 restApi로 totalId 테이블을 조회하여 중복검사를 추가했습니다.<br>
 																MyPage에서는 이메일과 연락처 변경 그리고 비밀번호 변경이 가능합니다.<br>
@@ -273,18 +274,32 @@
 									            		</tr>										            		
 									            		<tr>
 									            			<td>프로젝트 설명</td>
-									            			<td>Model2 MVC 방식으로 만든 세미 팀 프로젝트입니다.<br>
-									            				상품명 검색, 상품분류, 가격순/신상품순/인기상품순 정렬 기능<br>
-									            				세션을 이용하여 비로그인 장바구니를 로그인후에도 가져오는 기능<br>
-									            				리스너를 이용한 방문자수 기능, 배열을 이용한 여러개의 상품 한번에 주문내역으로 옮기는 기능을 구현하였습니다.
+									            			<td>MVC model2 방식으로 만든 첫 팀프로젝트이고 3명이 팀을 이루어 진행하였습니다.<br>
+									            				앞서 했던 개인프로젝트에 비해 DB의 테이블의 개수가 매우 많아짐에 따라 외래키의 불편함과 많아지는 조인문을 경험했습니다.<br>
+									            				Github를 협업으로 처음 사용하다보니 처음엔 커밋 충돌 오류가 많이 났습니다.<br>
+									            				담당하게된 부분은 로그인/로그아웃, 메인화면, 고객센터, 직원 및 고객의 등급변경, 공지사항이며 맡은 부분은 완료를 했습니다.<br>
+									            				session을 이용하여 로그인 화면을 구현했고, JavaScript로 고객탭과 직원탭을 구현했습니다.<br>
+									            				로그아웃은 session.invalidate()를 사용하여 구현했습니다.<br>
+									            				고객 및 직원의 등급 변경은 Jquery를 이용하여 select box의 값이 바뀌면 form이 submit 되도록 하였습니다.<br>
+									            				고객센터와 공지사항은 CRUD와 페이징을 구현했습니다.<br>
+									            				<br>
 									            				</td>
 									            		</tr>
 									            		<tr>
 									            			<td>개발환경</td>
-									            			<td>Language : Java(jdk-11.0.17)<br>
-									            				 사용 프로그램 : eclipse(2022-03 (4.23.0)),HeidiSQL(12.3.0)<br>
-									            				  Database : Mariadb(10.5.18) <br>
-									            				  server : tomcat9.0.68</td>
+									            			<td>OS : Window10<br>
+									            				Library : BootStrap5, JSTL(1.2), jQuery(3.6.1)<br>
+																Language : Java(JavaSE-11), HTML5, CSS3, JavaScript(ES6)<br>
+																사용 프로그램 : eclipse(2022-03 (4.23.0)),HeidiSQL(12.3.0)<br>
+																Database : Mariadb(10.5.18) <br>
+																server : tomcat9.0.68</td>
+									            		</tr>
+									            		<tr>
+									            			<td>서비스환경</td>
+									            			<td>OS: Ubuntu (18.04)<br>
+																Platform : AWS Lightsail<br>
+																Database : MariaDB(10.1.48)<br>
+																Language : Java(11.0.17)</td>
 									            		</tr>
 									            	</table>
 									         </div>
@@ -320,10 +335,19 @@
 									            		</tr>
 									            		<tr>
 									            			<td>개발환경</td>
-									            			<td>Language : Java(jdk-11.0.17)<br>
-									            				 사용 프로그램 : SpringToolSuite4(4.15.3),HeidiSQL(12.3.0)<br>
-									            				  Database : Mariadb(10.5.18) <br>
-									            				  server : tomcat9.0.68</td>
+									            			<td>OS : Window10<br>
+									            				Library : Servlet(4.0), BootStrap5, JSTL(1.2), jQuery(3.6.1)<br>
+																Language : Java(JavaSE-11), HTML5, CSS3, JavaScript(ES6)<br>
+																사용 프로그램 : SpringToolSuite4(4.15.3),HeidiSQL(12.3.0)<br>
+																Database : Mariadb(10.5.18) <br>
+																server : tomcat9.0.68</td>
+									            		</tr>
+									            		<tr>
+									            			<td>서비스환경</td>
+									            			<td>OS: Ubuntu (18.04)<br>
+																Platform : AWS Lightsail<br>
+																Database : MariaDB(10.1.48)<br>
+																Language : Java(11.0.17)</td>
 									            		</tr>
 									            	</table>
 									         </div>
@@ -360,10 +384,19 @@
 									            		</tr>
 									            		<tr>
 									            			<td>개발환경</td>
-									            			<td>Language : Java(jdk-11.0.17),<br>
-									            				 사용 프로그램 : eclipse(2022-03 (4.23.0)), HeidiSQL(12.3.0)<br>
-									            				  Database : Mariadb(10.5.18) <br>
-									            				  server : tomcat9.0.68</td>
+									            			<td>OS : Window10<br>
+									            				Library : BootStrap5, jQuery(3.6)<br>
+																Language : Java(JavaSE-11), HTML5, CSS3, JavaScript(ES6)<br>
+																사용 프로그램 : eclipse(2022-03 (4.23.0)), HeidiSQL(12.3.0)<br>
+																Database : Mariadb(10.5.18) <br>
+																server : tomcat9.0.68</td>
+									            		</tr>
+									            		<tr>
+									            			<td>서비스환경</td>
+									            			<td>OS: Ubuntu (18.04)<br>
+																Platform : AWS Lightsail<br>
+																Database : MariaDB(10.1.48)<br>
+																Language : Java(11.0.17)</td>
 									            		</tr>
 									            	</table>
 									         </div>
