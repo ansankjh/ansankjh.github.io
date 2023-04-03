@@ -203,7 +203,7 @@
 									            	<table class="table">
 									            		<tr>
      												    	<td colspan ="2">
-									            				<p>상태 : 프로젝트 진행중 (2023-02-15~)</p>
+									            				<p>상태 : 프로젝트 진행중 (2023-02-15~진행중)</p>
 									            				<p>이미지를 누르시면 배포 중인 해당 사이트를 확인하실 수있습니다.</p>
 									            				<a href="http://3.38.82.69/58platform/integrationPage" target="_blank"><img src ="images/final.png" width="90%" height="70%"></a>
 									            			</td>
@@ -214,21 +214,36 @@
 									            		</tr>										            		
 									            		<tr>
 									            			<td>프로젝트 설명</td>
-									            			<td>2023/02/15~ </td>
+									            			<td>SpringFramework를 사용하여 예약업체, 쇼핑몰, 광고업체 및 업체를 관리하는 통합플랫폼 3개의 조로 나누어 시작했습니다.<br>
+									            				처음엔 팀간의 협업을 통해 요구사항 정의서를 써보았지만 다른 조들의과 의견차이로 결과가 나오지 않았습니다.<br>
+									            				그러다 나오게 된게 UI/UX로 글이 아닌 사진으로 좀더 직관적이게 보고 추가할것과 뺄것을 정해서 웹 개발을 시작하였습니다.<br>
+																주로 담당하게된 부분은 로그인/로그아웃, 직원조회, 직원등록, 문의조회, FAQ이며 맡은 부분은 완료를 했습니다.<br>
+																로그인 화면에선 JavaScript로 자물쇠 이모티콘을 누르면 password가 아닌 text로 노출되게 구현했습니다.<br>
+																그리고 로그인 실패시에는 메시지가 출력되는데 이 또한 JavaScript로 새로고침하면 메시지값이 초기화 되게 구현했습니다.<br>
+																직원조회는 총관리자만 직원관리와 직원등록이 가능합니다.<br>
+																직원등록시엔 ajax와 restApi로 totalId 테이블을 조회하여 중복검사를 추가했습니다.<br>
+																MyPage에서는 이메일과 연락처 변경 그리고 비밀번호 변경이 가능합니다.<br>
+																비밀번호 변경시에는 3번까지 이력테이블에 등록이 되고 ajax와 restApi로 이력테이블을 조회하여 중복검사를 추가했습니다.<br>
+																문의조회는 답변이 없다면 답변등록페이지 있다면 답변수정 페이지로 when 코드를 사용하여 출력되게끔 했습니다.<br>
+																FAQ는 등록, 수정, 삭제를 구현했습니다. 조회는 jstl functions의 length와 substring을 사용하여<br>
+																질문이나 답변이 length를 넘어가면 ...으로 뜨도록 구현했습니다.<br>
+									            			</td>
 									            		</tr>
 									            		<tr>
 									            			<td>개발환경</td>
-									            			<td>Language : Java(jdk-11.0.14)<br>
-									            				 사용 프로그램 : SpringToolSuite4(4.15.3),HeidiSQL(12.3.0)<br>
-									            				  Database : Mariadb(10.4) <br>
-									            				  server : tomcat9.0.68</td>
+									            			<td>OS : Window10<br>
+									            				Library : Servlet(4.0), BootStrap5, JSTL(1.2), jQuery(3.6.1)<br>
+									            				Language : HTML5, CSS3 , Java(JavaSE-11), JavaScript(ES6)<br>
+																사용 프로그램 : SpringToolSuite4(4.15.3),HeidiSQL(12.3.0)<br>
+																Database : MariaDB(10.5.19)<br>
+																server : tomcat9.0.68</td>
 									            		</tr>
 									            		<tr>
-									            			<td>개발환경</td>
-									            			<td>Language : Java(jdk-11.0.14)<br>
-									            				 사용 프로그램 : SpringToolSuite4(4.15.3),HeidiSQL(12.3.0)<br>
-									            				  Database : Mariadb(10.4) <br>
-									            				  server : tomcat9.0.68</td>
+									            			<td>서비스환경</td>
+									            			<td>OS: Ubuntu (18.04)<br>
+																Platform : AWS Lightsail<br>
+																Database : MariaDB(10.1.48)<br>
+																Language : Java(11.0.17)</td>
 									            		</tr>
 									            	</table>
 									            	
